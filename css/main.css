@@ -18,14 +18,18 @@ body{
     padding: 10px;
     margin: 10px;
 }
+
 h1, h2{
     color: bisque;
     font-variant: small-caps;
 }
+footer{
+    clear: both;
+}
 footer p{
     font-size: 9px;
     color: burlywood;
-    clear: both;
+   
 }
 main{
     float: left;
