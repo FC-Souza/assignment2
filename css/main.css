@@ -1,0 +1,65 @@
+/*
+    Fernando Carvalho de Souza
+    Fcarvalhodesouz1115@conestogac.on.ca
+    #8911115
+*/
+
+body{
+    width: 1600px;
+    max-width: 95%;
+    font: normal normal normal 12px/1.5 Verdana, Arial, Helvetica;
+    padding: 10px;
+    margin: auto;
+}
+
+.headfoot{
+    border: 2px outset red;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 10px;
+}
+h1, h2{
+    color: bisque;
+    font-variant: small-caps;
+}
+footer p{
+    font-size: 9px;
+    color: burlywood;
+    clear: both;
+}
+main{
+    float: left;
+    max-width: 70%;
+    padding-left: 10px;
+    margin-left: 10px;
+
+}
+aside{
+    float: right;
+    max-width: 30%;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+.maining{
+    border: 2px outset red;
+}
+figcaption{
+    font-weight: bold;
+    font-variant: small-caps;
+}
+q{
+    font-family: cursive;
+    font-style: italic;
+    font-size: 16px;
+}
+ul li{
+    list-style: none;
+    line-height: 1.5;
+}
+ul > li > a {
+    text-decoration: none;
+    color: red; 
+}
+aside a:hover {
+    color: blue;
+}
