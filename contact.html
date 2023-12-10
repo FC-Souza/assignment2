@@ -1,0 +1,112 @@
+<!--
+    Fernando Carvalho de Souza
+    Fcarvalhodesouz1115@conestogac.on.ca
+    #8911115
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Biography of Albert Einstein">
+    <meta name="keywords" content="Albert Einstein, Albert, Einstein, Nobel, Nobel Prize, physicist, genius, relativity theory, biography">
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <title>Albert Einstein Biography</title>
+</head>
+<body class="grid">
+    <header class="headfoot">
+        <h1>Albert Einstein</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">Media</a>
+                <ul>
+                    <li><a href="gallery.html">Gallery</li></a>
+                    <li><a href="media.html">Videos</li></a>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <form>
+            <fieldset class="gridcontact">
+                <legend>Contact Us</legend>
+                <div id="gridfirst">
+                    <label for="first">First Name</label>
+                    <input type="text" name="first" id="first" class="required"  required>                        
+                </div>
+                <div id="gridlast">
+                    <label for="last">Last Name</label>
+                    <input type="text" name="last" id="last">
+                </div>
+                <div id="gridphone">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+                </div>
+                <div id="gridemail">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div id="gridgender">
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div id="gridprovince">
+                    <label for="province">Provinces</label>
+                        <select name="province" id="province">
+                            <option value="AB">Alberta</option>
+                            <option value="BC">British Columbia</option>
+                            <option value="MB">Manitoba</option>
+                            <option value="NB">New Brunswick</option>
+                            <option value="NL">Newfoundland and Labrador</option>
+                            <option value="NS">Nova Scotia</option>
+                            <option value="NT">Northwest Territories</option>
+                            <option value="NU">Nunavut</option>
+                            <option value="ON">Ontario</option>
+                            <option value="PE">Prince Edward Island</option>
+                            <option value="QC">Quebec</option>
+                            <option value="SK">Saskatchewan</option>
+                            <option value="YT">Yukon</option>
+                        </select>
+                </div>
+                <div id="gridcomment">
+                    <label for="comment">Your Message</label>
+                    <br>
+                    <textarea rows = "5" cols = 60 name="comment" id="comment" cols="30" rows="10"></textarea>
+                </div>
+                <div class="gridsubmit">
+                    <input class="button" type="submit" name="submit" id="submit" value="Submit">
+                </div>
+                <div class="gridclear">
+                    <input class="button" type="reset" name="clear" id="clear" value="Clear Form">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    
+    <aside>
+        <section>
+            <h2>Additional Information</h2>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Albert_Einstein" target="_blank">Wikipedia</a></li>
+                <li><a href="https://www.britannica.com/biography/Albert-Einstein" target="_blank">Britannica</a></li>
+                <li><a href="https://www.history.com/topics/inventions/albert-einstein" target="_blank">History Channel</a></li>
+            </ul>
+        </section>
+    </aside>
+
+    <footer class="headfoot">
+        <p>&copy;Fernando Carvalho de Souza 2023</p>
+    </footer>
+
+</body>
+</html>
