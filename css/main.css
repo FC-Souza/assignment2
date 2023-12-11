@@ -22,7 +22,7 @@
 .gridimg{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 250px 250px 250px;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 1rem;
     justify-items: center;
     align-items: center;
@@ -165,14 +165,14 @@ html{
 }
 
 body{
-    font: normal normal normal 16px/1.5 Verdana, Arial, Helvetica;
+    font: normal normal normal 1rem/1.5 Verdana, Arial, Helvetica;
     background-color: #F4EFE6;
 }
 
 header{
     grid-area: header;
-    border: 4px solid #965434;
-    border-radius: 12px;
+    border: 0.2rem solid #965434;
+    border-radius: 0.75rem;
     text-align: center;
     background: linear-gradient(to left top, #E8B076, #5F5852);
     font-size: 2.5rem;
@@ -180,10 +180,16 @@ header{
 
 footer{
     grid-area: footer;
-    border: 4px solid #965434;
-    border-radius: 12px;
+    border: 0.2rem solid #965434;
+    border-radius: 0.75rem;
     text-align: center;
-    background: linear-gradient(to left top, #E8B076, #5F5852);
+    background: linear-gradient(to left top, #E8B076, #9b8d80);
+}
+
+footer p{
+    font-size: 1rem;
+    color: black;  
+    font-weight: bolder;
 }
 
 nav{
@@ -316,7 +322,7 @@ tr {
 }
 
 th {
-    padding: 0.5rem 0.5 rem;
+    padding: 0.5rem 0.5rem;
     border-right: 0.15rem solid #5F5852;
 }
 
@@ -339,11 +345,6 @@ caption {
     text-align: left;
 }
 
-footer p{
-    font-size: 1rem;
-    color: #433f3b;  
-}
-
 figcaption{
     font-weight: bold;
     font-variant: small-caps;
@@ -352,16 +353,254 @@ figcaption{
 q{
     font-family: cursive;
     font-style: italic;
-    font-size: 16px;
+    font-size: 1.2rem;
 }
 
 aside ul li{
     list-style: none;
     line-height: 1.5;
 }
+
 aside ul > li > a {
     text-decoration: none;
     color: red; 
+}
+
+
+
+@media (max-width: 1200px){
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "aside"
+        "main"
+        "footer";
+    }
+
+    .gridimg{
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-rows: 1fr 1fr 1fr; */
+        grid-gap: 0.5rem;
+        justify-items: center;
+        align-items: center;
+        grid-template-areas: 
+        "gridimg1 gridimg2"
+        "gridimg3 gridimg4"
+        "gridimg5 gridimg6"
+        "gridimg7 gridimg8"
+        "gridimg9 .";
+    }
+
+    .maining{
+        /* display: none; */
+        /* max-width: 1fr;
+        width: 100%;
+        height: auto; */
+        width: 60vw;
+        min-width: 0px;
+    }
+
+    body{
+        font: normal normal normal 0.75rem/1.5 Verdana, Arial, Helvetica;
+        background-color: #F4EFE6;
+    }
+    
+    h1 {
+        color: #122560;
+        font-variant: small-caps;
+        font-size: 2.6rem;
+        margin: 1rem;
+    }
+    
+    h2 {
+        color: #122560;
+        font-variant: small-caps;
+        margin: 0 0;
+        font-size: 1.5rem;
+    }
+    
+    nav a {
+        font-size: 1.5rem;
+        font-weight: bold;
+        /* color: #5F5852; */
+        color: #122560;
+        text-decoration: none;
+        padding: 0.2rem;
+    }
+    thead tr {
+        font-size: 1.5rem;
+    }
+    
+    tbody tr {
+        font-size: 0.75rem;
+    }
+    
+    caption {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        color: #122560;
+        /* background-color: #FCFBF0; */
+        padding-bottom: 1rem;
+        text-align: left;
+    }
+    
+    footer p{
+        font-size: 0.75rem;
+        color: #433f3b;  
+    }
+    
+    q{
+        font-family: cursive;
+        font-style: italic;
+        font-size: 0.75rem;
+    }
+    aside{
+        grid-area: aside;
+        background-image: url(../images/download_100px.jpg);
+        background-color: black;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+    }
+
+    .gridcontact{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-rows: 0.3fr 0.3fr 0.3fr 1fr 0.2fr;
+        grid-column-gap: 0.5rem;
+        grid-row-gap: 0.5rem; */
+        grid-template-areas: 
+        "gridfirst gridlast"
+        "gridphone gridemail"
+        "gridgender gridprovince"
+        "gridcomment gridcomment"
+        "gridsubmmit gridclear";
+    }
+}
+
+
+@media (max-width: 600px){
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+    }
+
+    .gridimg{
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        /* grid-template-rows: 1fr 1fr 1fr; */
+        grid-gap: 0.5rem;
+        justify-items: center;
+        align-items: center;
+        grid-template-areas: 
+        "gridimg1"
+        "gridimg2"
+        "gridimg3"
+        "gridimg4"
+        "gridimg5"
+        "gridimg6"
+        "gridimg7"
+        "gridimg8"
+        "gridimg9";
+    }
+
+    .maining{
+        /* display: none; */
+        /* max-width: 1fr;
+        width: 100%;
+        height: auto; */
+        width: 60vw;
+        min-width: 0px;
+    }
+
+    body{
+        font: normal normal normal 0.5rem/1.5 Verdana, Arial, Helvetica;
+        background-color: #F4EFE6;
+    }
+    
+    h1 {
+        color: #122560;
+        font-variant: small-caps;
+        font-size: 1.75rem;
+        margin: 1rem;
+    }
+    
+    h2 {
+        color: #122560;
+        font-variant: small-caps;
+        margin: 0 0;
+        font-size: 1rem;
+    }
+    
+    nav a {
+        font-size: 1rem;
+        font-weight: bold;
+        /* color: #5F5852; */
+        color: #122560;
+        text-decoration: none;
+        padding: 0.2rem;
+    }
+    thead tr {
+        font-size: 1rem;
+    }
+    
+    tbody tr {
+        font-size: 0.5rem;
+    }
+    
+    caption {
+        font-size: 1rem;
+        font-weight: bolder;
+        color: #122560;
+        /* background-color: #FCFBF0; */
+        padding-bottom: 1rem;
+        text-align: left;
+    }
+    
+    footer p{
+        font-size: 0.5rem;
+        color: #433f3b;  
+    }
+    
+    q{
+        font-family: cursive;
+        font-style: italic;
+        font-size: 0.6rem;
+    }
+    aside{
+        grid-area: aside;
+        background-image: url(../images/download_600px.jpg);
+        background-color: black;
+        background-position: center;
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+    }
+
+    .gridcontact{
+        display: grid;
+        grid-template-columns: 1fr;
+        /* grid-template-rows: 0.3fr 0.3fr 0.3fr 1fr 0.2fr;
+        grid-column-gap: 0.5rem;
+        grid-row-gap: 0.5rem; */
+        grid-template-areas: 
+        "gridfirst"
+        "gridlast"
+        "gridphone"
+        "gridemail"
+        "gridgender"
+        "gridprovince"
+        "gridcomment"
+        "gridsubmmit"
+        "gridclear";
+    }
 }
 
 
